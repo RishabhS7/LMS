@@ -20,6 +20,7 @@ import { EmpIdContext } from "./contexts/EmpId/EmpIdContext";
 import LeaveApproval from "./pages/LeaveApproval/LeaveApproval"
 
 import AddEmployee from "./pages/EmployeeManager/AddEmployee/AddEmployee"
+import LeaveManagement from "./pages/Leave Management/LeaveManagement";
 function App(props) {
   let [empid, setEmpid] = useContext(EmpIdContext);
 
@@ -46,6 +47,9 @@ function App(props) {
               </Route>
               <Route exact path="/addEmployee">
                 <AddEmployee></AddEmployee>
+              </Route>
+              <Route exact path ="/leaveManagement">
+                <LeaveManagement></LeaveManagement>
               </Route>
             </Switch>
           </div>

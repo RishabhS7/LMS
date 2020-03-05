@@ -27,8 +27,11 @@ function SideBar() {
       case 'leaveApproval':
         history.push('/leaveApproval')
         break;
-        case 'addEmployee':
+      case 'addEmployee':
           history.push('/addEmployee')
+          break;
+      case 'leaveManagement':
+          history.push('/leaveManagement')
           break;
       default:
         history.push("/");
@@ -84,7 +87,7 @@ function SideBar() {
 
       {
         role=='admin'?
-        <button type="button" onClick={()=>{loadAnotherPage('applyLeave')}} key="5" >
+        <button type="button" onClick={()=>{loadAnotherPage('leaveManagement')}} key="5" className={location.pathname==='/leaveManagement'?'selected':''} >
         Leave management{" "}
         <img
           src={require("../../icons/arrowb.png")}
